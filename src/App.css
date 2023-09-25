@@ -1,0 +1,23 @@
+:root,
+div {
+  background-color: aliceblue;
+}
+
+.form-app {
+  margin: 0 auto;
+  width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .form-app {
+    width: 100%;
+  }
+}
+
+span.my-span {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  width: 10rem;
+  font-weight: 500;
+}

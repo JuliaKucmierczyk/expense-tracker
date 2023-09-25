@@ -15,7 +15,7 @@ export const ExpenseList = ({ expenses, onDelete }: Props) => {
 
   return (
     <div className="m-4">
-      <table className="table table-bordered ">
+      <table className="table">
         <thead>
           <tr>
             <th>Description</th>
@@ -44,14 +44,12 @@ export const ExpenseList = ({ expenses, onDelete }: Props) => {
         <tfoot>
           <tr>
             <td>Total</td>
-
             <td>
               {expenses
                 .reduce((acc, expense) => expense.amount + acc, 0)
                 .toFixed(2)}
               zł
             </td>
-            <td></td>
           </tr>
         </tfoot>
       </table>

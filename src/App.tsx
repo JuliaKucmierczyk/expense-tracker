@@ -19,24 +19,26 @@ function App() {
     : expenses;
 
   return (
-    <>
-      <div className="mb-5">
+    <section className="form-app">
+      <h3 className="m-4 align-items-center">
+        Do you know where your money goes?
+      </h3>
+      <div className="mb-5 pb-1">
         <ExpenseForm
           onSubmit={(expense) =>
             setExpenses([...expenses, { ...expense, id: expenses.length + 1 }])
           }
         />
       </div>
-      <div className="mb-3">
-        <ExpenseFilter
-          onSelectCategory={(category) => setSelectedCategory(category)}
-        />
-      </div>
+
+      <ExpenseFilter
+        onSelectCategory={(category) => setSelectedCategory(category)}
+      />
       <ExpenseList
         expenses={visibleExpenses}
         onDelete={(id) => setExpenses(expenses.filter((e) => e.id != id))}
       />
-    </>
+    </section>
   );
 }
 
